@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+
+$path = __DIR__ . '/../vendor/autoload.php';
+$pathInBinDirectory = __DIR__ . '../autoload.php';
+if (is_file($path)) {
+    /** @noinspection PhpIncludeInspection */
+    require $path;
+} elseif (is_file($pathInBinDirectory)) {
+    /** @noinspection PhpIncludeInspection */
+    require $pathInBinDirectory;
+}
+
+(new \Behat\Behat\ApplicationFactory())
+    ->createApplication()
+    ->run(new \Symfony\Component\Console\Input\StringInput(implode(' ', array_slice($argv, 1))));
