@@ -14,5 +14,12 @@
     },
     "bin": [
         "bin/behat-runner"
+    ],
+    "repositories": [
+        {
+            "type": "github",
+            "url": "git@github.com:yavV/behat-runner.git",
+            "no-api": true
+        }
     ]
 }
