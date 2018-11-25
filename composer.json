@@ -1,5 +1,5 @@
 {
-    "name": "yavv/behat-runner",
+    "name": "yavV/behat-runner",
     "license": "proprietary",
     "require": {
         "facebook/webdriver": "^1.4",
